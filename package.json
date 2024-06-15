@@ -9,17 +9,34 @@
     "lint": "pnpm @biomejs/biome lint --write ./src",
     "check": "pnpm @biomejs/biome check --write ./src",
     "setup:web": "pnpm tsx scripts/setupForWeb.mts",
-    "postinstall":"lefthook install"
+    "postinstall": "lefthook install",
+    "dev": "pnpm remix vite:dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@biomejs/biome": "1.8.1",
+    "@remix-run/dev": "^2.9.2",
+    "@types/react": "npm:types-react@rc",
+    "@types/react-dom": "npm:types-react-dom@rc",
     "lefthook": "^1.6.15",
     "tsx": "^4.14.0",
     "typescript": "^5.4.5",
+    "vite": "^5.3.1",
     "vitest": "^1.6.0",
     "zx": "^8.1.2"
+  },
+  "dependencies": {
+    "@remix-run/node": "^2.9.2",
+    "@remix-run/react": "^2.9.2",
+    "@remix-run/serve": "^2.9.2",
+    "isbot": "4",
+    "react": "19.0.0-rc-fb9a90fa48-20240614",
+    "react-dom": "19.0.0-rc-fb9a90fa48-20240614"
+  },
+  "overrides": {
+    "@types/react": "npm:types-react@rc",
+    "@types/react-dom": "npm:types-react-dom@rc"
   }
 }
